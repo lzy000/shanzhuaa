@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--<script src="../../注册登录/main.js"></script>--> 
+</head>
+<body>
+    <header class="clearFix">
+        <p><a href="#">注册</a></p>
+    </header>
+    <div class="phone">
+        <img src="img/phone.png" alt="">
+        <input type="text" placeholder="用户名/手机号">
+        <span><img id="img" src="" alt=""></span>
+    </div>
+    <div class="suo">
+        <img src="img/suo.png" alt="">
+        <input type="password" placeholder="密码">
+        <span><img id="img1" src="" alt=""></span>
+    </div>
+    <a href="html/inhome.html">
+        <div class="deng">
+            登录
+        </div>
+    </a>
+    <a href="html/login1.html"><p class="p">忘记密码</p></a>
+
+    <script>
+        var inp = document.getElementsByTagName("input");
+        var img = document.getElementById("img");
+        var img1 = document.getElementById("img1");
+        inp[0].onblur = function(){
+            var str = /^[01][0-9]{10}$/
+            var span = document.getElementsByTagName("span")[0];
+            if(str.test(inp[0].value)){
+                img.src = "img/yes.png";
+            }else{
+                img.src = "img/d_03.png";
+            }
+        }
+        inp[1].onblur = function(){
+            var str = /^[/w][a-zA-Z0-9]{6,12}$/
+            var span = document.getElementsByTagName("span")[1];
+            if(str.test(inp[1].value)){
+                img1.src = "img/yes.png";
+            }else{
+                img1.src = "img/d_03.png";
+            }
+        }
+        window.onresize=function(){
+            change();
+        };
+
+        change();
+        function change(){
+            var oFs=document.documentElement.clientWidth/(320/20);
+
+            //设置根目录字体大小
+            document.documentElement.style.fontSize=oFs+'px';
+        }
+    </script>
+</body>
+</html>

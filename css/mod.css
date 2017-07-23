@@ -1,0 +1,133 @@
+body {
+  background: #F5F5F5; }
+
+.back, header, .submit_btn > div {
+  background: #ffac28; }
+
+.flex, header .header_nav, main > .pass li, .main_ul li, .main_ul li > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.clearFix:after, .main_ul li > div:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+header {
+  color: #fff; }
+  header a {
+    color: #fff; }
+  header .header_nav {
+    padding: 1rem 1.6rem 1.5rem 1.3rem;
+    box-sizing: border-box; }
+    header .header_nav a img {
+      width: 1.5rem; }
+    header .header_nav h3 {
+      font-size: 1.5rem; }
+
+.submit_btn {
+  padding: 1.7rem 1.1rem 7.5rem 1.1rem;
+  box-sizing: border-box; }
+  .submit_btn > div {
+    text-align: center;
+    border-radius: 4px;
+    padding-top: 0.95rem;
+    padding-bottom: 0.8rem;
+    opacity: 0.8; }
+    .submit_btn > div a {
+      color: #FFFFFF;
+      display: block;
+      width: 100%;
+      font-size: 1.2rem; }
+
+main > div > h3 {
+  text-align: center;
+  padding: 1.3rem 0 1.3rem 0rem;
+  color: #999;
+  font-size: 1.2rem; }
+main > div div {
+  display: flex;
+  width: 13.3rem;
+  margin: 0 auto;
+  text-align: left;
+  align-items: center;
+  font-size: 1.8rem;
+  padding: 1.8rem 0 2.1rem 0; }
+  main > div div input {
+    width: 4.1rem;
+    text-align: center;
+    border: none;
+    background: #F5F5F5; }
+main > h3 {
+  padding: 1.3rem 0 1.3rem 1.7rem;
+  color: #999;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #eaeaea; }
+main > .pass li {
+  padding: 1.2rem;
+  background: #FFFFFF;
+  border-bottom: 1px solid #eaeaea;
+  box-sizing: border-box;
+  font-size: 1.2rem; }
+  main > .pass li > div {
+    padding-right: 0.6rem; }
+    main > .pass li > div img {
+      width: 1.5rem; }
+  main > .pass li input {
+    flex: 1;
+    border: none; }
+main h4 {
+  width: 8.9rem;
+  height: 2.4rem;
+  line-height: 2.4rem;
+  background: #fa5a2a;
+  border-radius: 4px;
+  text-align: center; }
+  main h4 a {
+    color: #FFFFFF; }
+    main h4 a:nth-of-type(2) {
+      display: none; }
+
+.ear {
+  color: #f72d00;
+  cursor: pointer; }
+
+.main_ul {
+  background-color: #fff;
+  box-sizing: border-box;
+  font-size: 1.2rem; }
+  .main_ul > div {
+    border-bottom: 1px solid #eaeaea;
+    width: 100%; }
+  .main_ul li {
+    padding: 1.2rem 1.7rem;
+    border-bottom: 1px solid #eaeaea; }
+    .main_ul li > div > a div {
+      float: right;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url("../img/btn_right.png") no-repeat center center;
+      background-size: 50%; }
+
+footer {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: rgba(98, 98, 98, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0; }
+  footer > div {
+    width: 20.6rem;
+    height: 8.3rem;
+    line-height: 8.3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 4px;
+    background: #fff;
+    position: absolute;
+    top: 40%;
+    left: 11%; }
+
+/*# sourceMappingURL=mod.css.map */

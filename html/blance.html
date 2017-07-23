@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/blance.css">
+    <script src="../js/rem.js"></script>
+    <script src="../zepto.min.js"></script>
+</head>
+<body>
+<!--余额转化-->
+<div class="blance-box">
+    <div class="blance">
+        <div class="blance_top">
+            <a href="disap.html" class="blance_return"><img src="../img/return.png" alt="" ></a>
+            <div>
+                余额转换
+            </div>
+        </div>
+        <div class="blance_bottom">
+            <div class="blance_bottom_content">
+                <div>短</div>
+                <div>
+                    <span>余额转换</span>
+                    <span><img src="../img/jian.png" alt=""></span>
+                </div>
+                <div>闪</div>
+            </div>
+        </div>
+        <p class="blance_tig">您仅可以将短信转换为闪注量</p>
+    </div>
+    <div class="blance-content">
+        <p class="blance_content_tit">当前短信账户余额为：100条</p>
+        <ul class="blance_content_data">
+            <li class="blance_content_data_list">
+                <span>短信量</span>
+                <input type="number" placeholder="您最多可转换信量100条">
+            </li>
+            <li class="blance_content_data_list">
+                <span>闪注量</span>
+                <input type="number"  placeholder="0">
+            </li>
+        </ul>
+    </div>
+    <!--转换按钮-->
+    <div class="blance_btn">
+        <input type="submit" value="余额转换" class="submit_btn">
+    </div>
+</div>
+<div class="blance-float">
+    <div class="blance-float-box">
+        <div>
+            余额转换成功！
+            <div class="seccess">确定</div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+//    $(function(){
+//        $("submit_btn").on("singleTap",function(){
+//            console.log(1)
+//        })
+//    })(Zepto)
+    (function($){
+        $(".submit_btn").on("singleTap",function(){
+//            console.log(1);
+            $(".blance-float").css({"display":"block"});
+            $(".blance-float").animate({opacity:1});
+        })
+        $(".seccess").on("singleTap",function(){
+            $(".blance-float").css({"display":"none"});
+            $(".blance-float").animate({opacity:0});
+        })
+    })(Zepto)
+</script>
+</html>

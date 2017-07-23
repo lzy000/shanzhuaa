@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login1.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        .tel div{
+            width:1.15rem;
+            height:1.15rem;
+            border:2px solid red;
+            border-radius: 50%;
+            color:red;
+            text-align: center;
+            line-height: 1.15rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="login1.html"><span><img src="../img/lt.png" alt=""></span></a>
+    <p>忘记密码</p>
+</header>
+<p class="p">请输入您收到的验证码</p>
+<div class="tel">
+    <span><img src="../img/email.png" alt=""></span>
+    <input class="inp" type="text" placeholder="验证码">
+    <div id="div">60s</div>
+    <!--<span><img id="spa" src="../img/false.png" alt=""></span>-->
+
+</div>
+<a href="login3.html">
+    <div class="next">
+        下一步
+    </div>
+</a>
+<script>
+    var inp = document.getElementsByClassName("inp")[0]
+    var div = document.getElementById("div");
+    inp.onblur = function(){
+        clearInterval(time)
+        var timer = 60;
+        function fun(){
+            timer--;
+            div.innerHTML = timer + "s";
+            if(timer == 0){
+                return timer = 60
+            }
+        }
+       var time =  setInterval(fun,1000) ;
+    }
+    window.onresize=function(){
+        change();
+    };
+
+    change();
+    function change(){
+        var oFs=document.documentElement.clientWidth/(320/20);
+
+        //设置根目录字体大小
+        document.documentElement.style.fontSize=oFs+'px';
+    }
+</script>
+</body>
+</html>

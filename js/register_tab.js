@@ -1,0 +1,28 @@
+var app=angular.module("app",["ngRoute"])
+app.controller("con",function($scope){
+	$scope.aa=true
+	$scope.bb=false
+	$scope.cc=false
+	$scope.qq=function(){
+		$scope.aa=true
+		$scope.bb=false
+		$scope.cc=false
+	}
+	$scope.ww=function(){
+		$scope.aa=false
+		$scope.bb=true
+		$scope.cc=false
+	}
+	$scope.ee=function(){
+		$scope.aa=false
+		$scope.bb=false
+		$scope.cc=true
+	}
+})
+app.config(["$routeProvider",function($routeProvider){
+	$routeProvider
+	.when("/one",{templateUrl:"one.html"})
+	.when("/two",{templateUrl:"two.html"})
+	.when("/three",{templateUrl:"three.html"})
+	.otherwise({redirectTo:"/one"})
+}])

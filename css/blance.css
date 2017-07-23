@@ -1,0 +1,140 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: "微软雅黑";
+}
+body{
+    background: rgb(245,245,245);
+}
+.blance{
+    background: rgb(250,90,42);
+}
+.blance_top{
+    width: 100%;
+    padding-top: 1.34rem;
+    padding-bottom: 0.6rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.blance_top>div{
+    font-size: 0.8rem;
+    color: rgb(255,255,255);
+    display: flex;
+    align-items: center;
+}
+.blance_top>div>img{
+    width: 0.45rem;
+    margin-left: 0.15rem;
+}
+.blance_top>a>img{
+    width: 0.45rem;
+}
+.blance_return{
+    position: absolute;
+    left: 0.6rem;
+}
+.blance_bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.65rem 0;
+}
+.blance_bottom_content{
+    display: flex;
+    align-items: center;
+    color: rgb(255,255,255);
+}
+.blance_bottom_content>div:nth-of-type(2){
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    padding: 0.4rem 0;
+}
+
+.blance_bottom_content>div:nth-of-type(1),.blance_bottom_content>div:nth-of-type(3){
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 1.75rem;
+}
+.blance_bottom_content>div:nth-of-type(1){
+    border: 2px solid rgb(254,175,43);
+}
+.blance_bottom_content>div:nth-of-type(3){
+    border: 2px solid rgb(255,255,255);
+    background: rgb(254,175,43);
+}
+.blance_tig{
+    text-align: center;
+    padding-bottom: 0.45rem;
+    color: rgb(255,255,255);
+}
+.blance-content{
+    /*padding: 0 0.5rem;*/
+}
+.blance_content_tit{
+    padding: 0.6rem 0 0.6rem 0.5rem;
+    color: rgb(145,145,145);
+}
+.blance_content_data{
+
+}
+.blance_content_data_list{
+    padding: 0.65rem 0 0.65rem 0.5rem;
+    background: rgb(255,255,255);
+    border-bottom: 1px solid rgb(235,235,235);
+
+}
+.blance_content_data_list>input{
+    margin-left: 0.85rem;
+    color: rgb(163,163,163);
+}
+.blance_btn{
+    padding: 0 0.5rem;
+}
+.blance_btn>input{
+    width: 100%;
+    background: rgb(254,213,85);
+    color: rgb(255,255,255);
+    border-radius: 5px;
+    margin-top: 0.7rem;
+    padding: 0.45rem 0;
+}
+.blance-float{
+    width: 100%;
+    height: 100%;
+    background: rgba(98,98,98,0.6);
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    display: none;
+    opacity: 0;
+}
+.blance-float-box{
+    width: 11.5rem;
+    background: rgb(255,255,255);
+    margin: 13rem auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.blance-float-box>div{
+    padding: 2.1rem 0 3.5rem 0;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+}
+.blance-float-box>div>div{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem 0;
+    background: rgb(255,217,116);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: rgb(255,255,255);
+}

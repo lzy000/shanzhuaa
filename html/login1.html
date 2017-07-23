@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login1.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+    <header>
+        <a href="login.html"><span><img src="../img/lt.png" alt=""></span></a>
+        <p>忘记密码</p>
+    </header>
+    <p class="p">请输入您绑定的手机号码</p>
+    <div class="tel">
+        <span><img src="../img/tel.png" alt=""></span>
+        <input class="inp" type="number" placeholder="手机号码">
+        <span><img id="spa" src="../img/false.png" alt=""></span>
+
+    </div>
+    <a href="#">
+        <div class="next">
+            下一步
+        </div>
+    </a>
+    <div class="block">
+        <div class="block_one">
+            <h2>确认手机号码</h2>
+            <p>我们将发送验证码到：</p>
+            <p id="p"></p>
+            <div>
+                <a href="login1.html"><span id="no">取消</span></a>
+                <a href="login2.html"><span id="yes">确定</span></a>
+            </div>
+            </div>
+
+    </div>
+    <div class="none">
+        <div class="block_two">
+            <p>请输入正确手机号码</p>
+            <a href="login1.html"><div>确定</div></a>
+        </div>
+    </div>
+    <script>
+        var inp = document.getElementsByClassName("inp");
+        var spa = document.getElementById("spa");
+        inp[0].onblur = function(){
+            var str = /^[01][0-9]{10}$/;
+            if(str.test(inp[0].value)){
+                spa.src = "../img/yes.png";
+            }else{
+                spa.src = "../img/false.png";
+            }
+
+        }
+        spa.onclick = function(){
+            inp[0].value = '';
+        }
+        var next = document.getElementsByClassName("next")[0];
+
+        next.onclick = function(){
+            if(inp[0].value.length != 11){
+
+                var none = document.getElementsByClassName("none")[0];
+                none.style.display = "block";
+            }else{
+              var block = document.getElementsByClassName("block")[0];
+                block.style.display = "block";
+                var p = document.getElementById("p");
+                p.innerHTML = inp[0].value;
+            }
+
+        }
+
+        window.onresize=function(){
+            change();
+        };
+
+        change();
+        function change(){
+            var oFs=document.documentElement.clientWidth/(320/20);
+
+            //设置根目录字体大小
+            document.documentElement.style.fontSize=oFs+'px';
+        }
+    </script>
+</body>
+</html>

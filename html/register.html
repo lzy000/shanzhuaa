@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" href="../css/register.css" />
+		<script src="../js/font.js"></script>
+		<script src="../js/angular.min.js"></script>
+		<script src="../js/angular-route.min.js"></script>
+		<script src="../js/register_tab.js"></script>
+		<script src="../js/jquery.3.1.1.js"></script>
+		<script src="../js/register.js"></script>
+	</head>
+	<body ng-app="app" ng-controller="con">
+		<div class="top">
+			<div class="fun">
+				<a href="javascript:;">
+					<span>注册量统计</span>
+					<img src="../images/register_down.png" />
+				</a>
+				<a href="inhome.html"><img src="../images/register_left.png" class="posi1"/></a>
+			</div>
+			<div class="img">
+				<p class="content1">今日注册量</p>
+				<p class="content2"><span>158</span>(人)</p>
+				<p class="content3">
+					<span>APP：120人</span>&nbsp;&nbsp;
+					<span>H5/web：38人</span>
+				</p>
+			</div>
+		</div>
+		
+		<div class="nav">
+			<p ng-class="{active:aa}" ng-click="qq()" ng-model="aa"><a href="#/one">今日注册量</a></p>
+			<p ng-class="{active:bb}" ng-click="ww()" ng-model="bb"><a href="#/two">一周注册量</a></p>
+			<p ng-class="{active:cc}" ng-click="ee()" ng-model="cc"><a href="#/three">一个月注册量</a></p>
+		</div>
+		
+		<div class="big">
+			<div class="all">
+				<div class="first">
+					<input type="button" value="全部" />
+				</div>
+				<div class="second">
+					<div>
+						<img src="../images/border.png" /><span>应用场景</span><img src="../images/border.png" />
+					</div>
+					<div>
+						<input type="button" value="APP" />
+						<input type="button" value="H5/web" />
+					</div>
+				</div>
+				<div class="third">
+					<div>
+						<img src="../images/border.png" /><span>注册方式</span><img src="../images/border.png" />
+					</div>
+					<div>
+						<input type="button" value="闪注" />
+						<input type="button" value="短信" />
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div ng-view=""></div>
+	</body>
+</html>
